@@ -1,0 +1,4 @@
+{
+	// used during development for better IntelliSense
+	"extends": "./tsconfig.dev",
+}

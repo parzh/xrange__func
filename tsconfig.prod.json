@@ -1,0 +1,7 @@
+{
+	// used in "build" npm script
+	"extends": "./tsconfig.common",
+	"compilerOptions": {
+		"diagnostics": true,
+	},
+}

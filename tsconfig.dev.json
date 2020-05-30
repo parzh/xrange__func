@@ -1,0 +1,11 @@
+{
+	// used in "dev" npm script
+	"extends": "./tsconfig.common",
+	"include": [
+		"src",
+		"test",
+	],
+	"compilerOptions": {
+		"watch": true,
+	},
+}

@@ -1,0 +1,22 @@
+{
+	// (abstract) extended by all tsconfig*.json files
+	"include": [
+		"src",
+	],
+	"compilerOptions": {
+		"target": "es2015",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"outDir": "dist",
+		"declaration": true,
+		"stripInternal": true,
+
+		"strict": true,
+		"noUnusedLocals": true,
+		"esModuleInterop": true,
+		"downlevelIteration": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"diagnostics": false,
+	},
+}
