@@ -11,7 +11,6 @@ export interface NextFactory {
 	(memo: Readonly<NextFactoryMemo>): number;
 }
 
-/** @internal */
 export default function* xrangeFunctional(start: number, predicate: Predicate, next: NextFactory, maxMemo = Infinity): XRange {
 	const memoNeeded = maxMemo > 0 && (predicate.length >= 2 || next.length >= 1);
 	const memo: number[] = [];
