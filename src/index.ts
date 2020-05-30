@@ -1,1 +1,3 @@
-export default null;
+import xrange from "./xrange";
+
+export = xrange;
