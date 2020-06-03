@@ -1,15 +1,9 @@
-export type XRange = Generator<number, number>;
+import type XRange from "./typings/xrange";
+import type Predicate from "./typings/predicate";
+import type NextFactory from "./typings/next-factory";
+import type { Memo } from "./typings/next-factory";
 
-export interface Predicate {
-	(next: number, memo: ReadonlyArray<number | undefined>): boolean;
-}
-
-/** @private */
-type NextFactoryMemo = [ number, ...(number | undefined)[] ];
-
-export interface NextFactory {
-	(memo: Readonly<NextFactoryMemo>): number;
-}
+export type { XRange, Predicate, NextFactory };
 
 export default function* xrangeFunctional(start: number, predicate: Predicate, next: NextFactory, maxMemo = Infinity): XRange {
 	const memoNeeded = maxMemo > 0 && (predicate.length >= 2 || next.length >= 1);
@@ -27,7 +21,7 @@ export default function* xrangeFunctional(start: number, predicate: Predicate, n
 				memo.pop();
 		}
 
-		curr = +next(memo as NextFactoryMemo);
+		curr = +next(memo as Memo);
 	}
 
 	return NaN;
