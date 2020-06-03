@@ -13,8 +13,10 @@
     "xrange"
   ],
   "files": [
-    "dist",
-    "README.md"
+    "/dist",
+    "!dist/typings/**/*.js",
+    "!dist/**/*.impl.d.ts",
+    "/README.md"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -50,8 +52,10 @@
     "test": "jest --no-cache",
     "start": "node --require ts-node/register src",
     "clean": "rimraf dist/*",
+    "clean:spare": "rimraf dist/typings/**/*.js dist/**/*.impl.d.ts",
     "prebuild": "npm run clean",
     "build": "tsc --project ./tsconfig.prod.json",
+    "postbuild": "npm run clean:spare",
     "dev": "tsc --project ./tsconfig.dev.json",
     "prepublishOnly": "npm run build && npm test && git push --follow-tags"
   },
