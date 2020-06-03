@@ -3,6 +3,11 @@ import type Predicate from "./typings/predicate";
 import type NextFactory from "./typings/next-factory";
 import type { Memo } from "./typings/next-factory";
 
+/*
+	FIXME: remove this in v2.0 (left for back-compat)
+	Avoid re-exporting everything everywhere
+	Only index.ts should do that
+*/
 export type { XRange, Predicate, NextFactory };
 
 export default function* xrangeFunctional(start: number, predicate: Predicate, next: NextFactory, maxMemo = Infinity): XRange {
