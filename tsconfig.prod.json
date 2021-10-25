@@ -1,7 +1,11 @@
 {
-	// used in "build" npm script
-	"extends": "./tsconfig.common",
+	"extends": "./tsconfig",
+	"include": [
+		"src",
+	],
 	"compilerOptions": {
+		"watch": false,
+		"noEmit": false,
 		"diagnostics": true,
 	},
 }

@@ -56,7 +56,7 @@
     "prebuild": "npm run clean",
     "build": "tsc --project ./tsconfig.prod.json",
     "postbuild": "npm run clean:spare",
-    "dev": "tsc --project ./tsconfig.dev.json",
+    "dev": "tsc --project ./tsconfig.json",
     "prepublishOnly": "npm run build && npm test && git push --follow-tags"
   },
   "devDependencies": {
