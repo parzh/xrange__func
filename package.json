@@ -1,7 +1,7 @@
 {
   "name": "@xrange/func",
   "description": "Functional sequencer of `xrange`, provided as a separate package",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "keywords": [
     "functional",
